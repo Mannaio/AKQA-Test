@@ -1,0 +1,30 @@
+@-webkit-keyframes fade_in_from_left {
+    0%, 60%, 75%, 90%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: translate3d(-3000px, 0, 0);
+    }
+    60% {
+        opacity: 0.25;
+        transform: translate3d(25px, 0, 0);
+    }
+    75% {
+        opacity: 0.5;
+        transform: translate3d(-10px, 0, 0);
+    }
+    90% {
+        opacity: 0.75;
+        transform: translate3d(5px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.fade_in_and_from_left {
+    -webkit-animation: fade_in_from_left 1.5s;
+    animation: fade_in_from_left 1.5s;
+}

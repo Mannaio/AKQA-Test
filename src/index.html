@@ -2,17 +2,171 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Testing da page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIM - Landing Page</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   </head>
   <body>
-    <div class="img-container">
-      <div class="img-container__wrapper">
-          <img src="images/oo.jpg" alt="">
-          <p>Image pops</p>
-      </div>
+    <div class="wrapper">
+      <section class="tim-navigation">
+        <div class="navbar">
+          <nav class="navbar-mobile">
+            <ul class="navbar-list-mobile">
+              <li class="navbar-list-mobile__item"><a href="" class="logo"></a></li>
+              <li class="navbar-list-mobile__item"><a href="" class="menu"></a></li>
+            </ul>
+          </nav>
+          <nav class="navbar-desktop">
+            <ul class="navbar-list-desktop-left">
+              <li class="navbar-list-desktop-left__item"><a class="logo"></a></li>
+              <li class="navbar-list-desktop-left__item"><a class="paypal"></a></li>
+            </ul>
+            <ul class="navbar-list-desktop-right">
+              <li class="navbar-list-desktop-right__item"><a href="#ricarica">Riarica con Paypal</a></li>
+              <li class="navbar-list-desktop-right__item"><a href="#comefare">Come Fare</a></li>
+              <li class="navbar-list-desktop-right__item"><a href="#dettagli">Dettagli</a></li>
+              <li class="navbar-list-desktop-right__item"><a href="" class="share"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="tim-promotion" id="ricarica">
+        <div class="container">
+          <div class="flex-grid flex-grid--lg">
+            <div class="flex-grid__col flex-grid__col--justify-content flex-grid__col--flex-order">
+              <div class="image-container">
+              </div>
+            </div>
+            <div class="flex-grid__col flex-grid__col--flex-direction">
+              <div class="tim-promotion-text">
+                <div>
+                  <span class="big--bold">Ricarica</span> da <span class="big--bold"> APP MyTim </span> o su <span class="big--bold"> Tim.it </span>con Paypal
+                </div>
+                <div class="tim-promotion-subtext">
+                  Solo il <span class="big--bold"> 20 </span> e <span class="big--bold">  21 </span> Giugno per te il <span class="big--bold"> 10% </span> di ricarica in più in <span class="big--bold"> OMAGGIO </span>
+                </div>
+              </div>
+              <div class="tim-promotion-buttons">
+                <button class="button button__main">RICARICA DA APP</button>
+                <button class="button button__secondary">RICARICA DA WEB</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tim-offer" id="comefare">
+        <div class="tim-titles">
+          <h2>Come ottenere il bonus</h2>
+          <span class="subtitle">Segui 3 semplici passaggi</span>
+        </div>
+        <article class="tim-mobile-carousel-steps">
+          <div class="container">
+            <div class="flex-grid flex-grid--lg">
+              <div class="flex-grid__col">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide--1"></div>
+                    <div class="swiper-slide swiper-slide--2"></div>
+                    <div class="swiper-slide swiper-slide--3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="tim-desktop-steps fade_in_and_from_left">
+          <div class="container">
+            <div class="steps flex-grid flex-grid--lg">
+              <div class="flex-grid__col steps--1"></div>
+              <div class="flex-grid__col steps--2"></div>
+              <div class="flex-grid__col steps--3"></div>
+            </div>
+          </div>
+        </article>
+        <article class="tim-buttons">
+          <div class="flex-grid__col flex-grid__col--flex-direction">
+            <div class="tim-promotion-buttons">
+              <button class="button button__main">RICARICA DA APP</button>
+              <button class="button button__secondary">RICARICA DA WEB</button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="tim-details" id="dettagli">
+        <div class="container">
+          <h2>Dettagli</h2>
+          <article class="flex-grid--sm accordion">
+            <div class="">A chi é rivolta la promozione</div>
+            <div class="">+</div>
+          </article>
+          <article class="flex-grid--sm accordion">
+            <div class="">Come partecipare alla promozione</div>
+            <div class="">+</div>
+          </article>
+          <article class="flex-grid--sm accordion">
+            <div class="">Contenuto della promozione</div>
+            <div class="">+</div>
+          </article>
+          <article class="flex-grid--sm accordion">
+            <div>Modalitá di erogazione del bonus di credito aggiuntivo oggetto della Presente Promozione</div>
+            <div>+</div>
+          </article>
+        </div>
+      </section>
+      <footer>
+        <section class="tim-footer">
+          <div class="container flex-grid--sm">
+            <div>
+              <ul class="footer-list flex-grid--sm">
+                <li class="footer-list__item--mobile"><a>Privacy</a></li>
+                <li class="footer-list__item--mobile"><a>Info Cookie</a></li>
+                <li class="footer-list__item--desktop first"><a>Note legali</a></li>
+                <li class="footer-list__item--desktop"><a>Website</a></li>
+                <li class="footer-list__item--desktop"><a>Info</a></li>
+                <li class="footer-list__item--desktop"><a>Contatti</a></li>
+                <li class="footer-list__item--desktop"><a>Tutela Minori</a></li>
+                <li class="footer-list__item--desktop"><a>Newsletter</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="footer-list flex-grid--sm">
+                <li class="footer-list__item--mobile"><a><img class="desktop" src="images/desktop.png" alt="versione desktop">Versione Desktop</a></li>
+                <li class="footer-list__item--desktop"><a>Telecom Italia 2017 - P.IVA </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="iva">
+            <div>Telecom Italia 2017 P.IVA 00488410010</div>
+          </div>
+        </section>
+      </footer>
     </div>
-    <button class="button"></button>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+
+    </script>
   </body>
 </html>

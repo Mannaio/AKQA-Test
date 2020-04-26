@@ -1,18 +1,37 @@
-/*
-This file is been made to give you an example of what kind of files should
-be placed in this componets folder
-*/
+$border-radius:          20px !default;
+$border-color:            #bbb !default;
 
 .button {
-  padding: 0 25px;
-  height: 35;
-  line-height: 35px;
+  background-color: transparent;
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  height: 45px;
+  width: 300px;
+  letter-spacing: .1rem;
+  line-height: 38px;
+  margin-bottom: 1rem;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  @include breakpoint(desktop) {
+    padding: 0 15px;
+    font-size: 12px;
+    width: auto;
+  }
   &__main {
-    background-color: $main-color;
-    color: white;
+    background-color: $red;
+    color: $white;
   }
   &__secondary {
-    background-color: transparent;
-    color: $main-color;
+    background-color: $white;
+    color: $blue;
+    border: 1px solid $blue;
+    @include breakpoint(desktop) {
+      margin-left: 10px;
+    }
   }
 }

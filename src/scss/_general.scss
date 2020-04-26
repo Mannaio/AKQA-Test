@@ -1,18 +1,207 @@
 /*
 Place for styles that concerns to the page itself
 */
+
+@mixin background-image($img, $width, $height, $background-position, $background-size) {
+    background-image: url('../images/#{$img}');
+    width: $width;
+    height: $height;
+    background-position: $background-position;
+    background-size: $background-size;
+    background-repeat: no-repeat;
+}
+
+// Images Styles
+
 .container {
-  background-color: $red;
-  &.box {
-    background-color: $green;
-    padding: .4;
-    &.wrapper {
-      background-color: $yellow;
+  margin: 0 auto;
+  padding: 10px 15px;
+  max-width: 1000px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tim-navigation {
+  background: $blue;
+  padding: 0 15px;
+  @include breakpoint(desktop) {
+    background: #1e5799; /* Old browsers */
+    background: linear-gradient(#325573 24%, #3b6284 38%, #2c77b6 100%);
+    }
+}
+
+.tim-promotion {
+  @include background-image("BG.png", 100%, 100%, bottom, cover);
+}
+
+
+.logo {
+  @include background-image("logo_mobile.svg", 80px, 30px, unset, 75px);
+  display: block;
+  margin-top: 17px;
+}
+
+.paypal {
+  @include background-image("paypal.png", 80px, 30px, unset, 75px);
+  display: block;
+  margin-top: 17px;
+}
+
+.menu {
+  @include background-image("Hamburger-Icon.png", 25px, 30px, 0px 5px, 25px);
+  display: block;
+  margin-top: 12px;
+
+}
+
+.share {
+  @include background-image("share.png", 26px, 30px, 2px 3px, 20px);
+  display: block;
+}
+
+.timrobot {
+  height: 340px;
+  width: auto;
+}
+
+.desktop {
+  margin: 0px 4px -2px;
+  height: 15px;
+  width: 15px;
+}
+
+// Utils
+
+.big--bold{
+  font-weight: bold;
+}
+
+.image-container {
+  @include background-image("tel-robot.png", 400px, 400px, unset, cover);
+  margin: 30px 0;
+}
+
+// section Styles
+
+.tim-promotion-text {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  @include breakpoint(desktop) {
+    text-align: left;
+    width: 370px;
+    font-size: 32px;
+    margin-top: 70px;
+  }
+  .tim-promotion-subtext {
+    margin-top: 30px;
+    font-size: 32px;
+    @include breakpoint(desktop) {
+      font-size: 23px;
     }
   }
 }
-p {
-  color: $red;
-  font-size: 5em;
-  background: $black;
+
+
+.tim-promotion-buttons {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.tim-offer {
+  background: $white;
+  @include breakpoint(desktop) {
+    padding-bottom: 10px;
+    background: #1e5799; /* Old browsers */
+    background: linear-gradient(#FFFFFF 50%, #F5F5F5 75%, #F0F0F0 100%);
+  }
+
+  .tim-titles {
+    text-align: center;
+    padding-top: 50px;
+    h2 {
+      color: $blue;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      display: block;
+      color: #00a8d6;
+    }
+  }
+  .tim-mobile-carousel-steps {
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  .tim-desktop-steps {
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+      .steps {
+        &--1,
+        &--2,
+        &--3 {
+          cursor: pointer;
+          height: 370px;
+          background-repeat: no-repeat;
+          transition: transform .2s;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        &--1 {
+          background-image: url('../images/Step-1.png');
+          background-position: 21px -21px;
+        }
+        &--2 {
+          background-image: url('../images/Step-2.png');
+
+        }
+        &--3 {
+          background-image: url('../images/Step-3.png');
+          background-position: 21px -14px;
+        }
+      }
+    }
+  }
+}
+
+.tim-details {
+  color: $blue;
+  margin-bottom: 50px;
+  h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 40px;
+    @include breakpoint(desktop) {
+      margin-top: 20px;
+    }
+  }
+  .accordion {
+    padding: 10px 0;
+    border-bottom: 1px solid $black;
+    > div {
+      max-width: 80%;
+    }
+  }
+}
+
+.tim-footer {
+  height: 80px;
+  color: $gray;
+  background: $blue;
+  .iva {
+    text-align: center;
+    color: #1594c5;
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
 }

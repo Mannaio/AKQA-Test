@@ -1,0 +1,73 @@
+// Flex Grid Variables
+$flex-grid--column-margin: 2% !default;
+
+.flex-grid--sm {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid--lg{
+  display: block;
+}
+
+.flex-grid--lg > * {
+  padding-left: 0;
+  padding-right: 0;
+
+  &.flex-grid__col {
+    margin-left: 0;
+    &.flex-grid__col--justify-content {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+    }
+    &.flex-grid__col--flex-direction {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include breakpoint(desktop) {
+        align-items: flex-start;
+      }
+    }
+    &.flex-grid__col--flex-order {
+      @include breakpoint(desktop) {
+        order: 2
+      }
+    }
+  }
+}
+
+
+@include breakpoint(desktop) {
+
+  // row
+  .flex-grid {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  // columns
+  .flex-grid > * {
+    flex: 1;
+
+    &.flex-grid__col {
+      flex-grow: 4;
+    }
+
+
+    &:first-child{
+      margin-left: 0rem;
+    }
+
+    &:last-child{
+      margin-right: 0rem;
+    }
+  }
+
+}
